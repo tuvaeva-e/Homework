@@ -17,10 +17,10 @@ string numberStr3 = Console.ReadLine();
 int c = Convert.ToInt32(numberStr3);
 int max = a;
 
-if(max > b ) max = max;
+if(max > b ) max = a;
 if(max < b ) max = b;
 if(max < c ) max = c;
-if(max > c ) max = max;
+if(max > c ) max = b;
 
 Console.Write("максимальное число= ");
 Console.WriteLine(max);
