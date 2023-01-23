@@ -11,8 +11,8 @@ int GetNumber()
     return number;
 }
 
-int number = GetNumber();
-
+string Holiday(int number)
+{
 if (number == 6 || number == 7)
     {
         Console.WriteLine("да");
@@ -21,7 +21,8 @@ else
     {
         Console.WriteLine("нет");
     }
-
-
-
+    return".";
+}
+int day = GetNumber();
+Console.WriteLine(Holiday(day));
 
