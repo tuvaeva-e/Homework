@@ -30,9 +30,9 @@ int GetDifMinMax(int[] array)
     for (int i = 0; i < array.Length; i++)
     {
         if(minNumber > array[i])
-          minNumber = i;
+          minNumber = array[i];
         else if (maxNumber < array[i])
-          maxNumber = i;
+          maxNumber = array[i];
     }
       result = maxNumber - minNumber;
     return result;
