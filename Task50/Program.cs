@@ -55,25 +55,13 @@ void PrintMatrix(int[,] matrix)
 }
 
 
-void FindElement(int [,] matrix)
+void FindElement(int [,] matrix, int row, int column)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            Console.WriteLine($"значение элемента {i} строки и {j} столбца равно {matrix[i-1,j-1]}");
-        }
-    }
-    for (int i = 0; i > matrix.GetLength(0); i++)
-    {
-       for (int j = 0; j > matrix.GetLength(1); j++)
-       {
-        Console.WriteLine("такого элемента нет");
-       }
-    }
+if(matrix.GetLength(1) >= column && matrix.GetLength(1) >= row)
+Console.WriteLine($"значение элемента {row} строки и {column} столбца равно {matrix[row - 1 ,column - 1]}");
+else
+Console.WriteLine("такого элемента нет");
 }
-
-
 
 int countOfRows = GetNumber("Введите количество строк");
 int countOfColumns = GetNumber("Введите количество столбцов");
@@ -81,4 +69,5 @@ int[,] matrix = InitMatrix(countOfRows, countOfColumns);
 PrintMatrix(matrix);
 int index1 = GetNumber("введите строку");
 int index2 = GetNumber("введите столбец");
-FindElement(matrix);
+FindElement(matrix, index1, index2 );
+
